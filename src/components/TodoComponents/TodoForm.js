@@ -4,7 +4,11 @@ const TodoForm = props => {
     return(
         <div className='toDoForm'>
             <form onSubmit={props.addToDo}>
-                <input type='text' placeholder='What do you need to do?' value={props.value} onChange={props.handleChanges} name='todo' />
+                <input 
+                onChange={props.handleChanges} 
+                type='text'  
+                name='todo' 
+                placeholder='What do you need to do?' />
                 <button>Add to list</button>
             </form>
             <button onClick={props.clearDone}>Clear Completed</button>

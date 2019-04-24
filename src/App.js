@@ -8,10 +8,22 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      
+      toDosOnState: toDos,
+      toDo: {
+        item: ''
+      }
     }
   }
   
+  handleChanges = event => {
+    console.log(event.target.value);
+    this.setState({
+      toDo: {
+        ...this.state.toDo,
+        [event.target.item]: event.target.value
+      }
+    });
+  };
   
   render() {
     return (

@@ -24,6 +24,16 @@ class App extends React.Component {
       }
     });
   };
+
+  addToDo = event => {
+    event.preventDefault();
+    this.setState({
+      toDosOnState: [...this.state.toDosOnState, this.state.item],
+      toDo: {
+        item: ''
+      }
+    });
+  };
   
   render() {
     return (

@@ -54,6 +54,7 @@ class App extends React.Component {
     event.preventDefault();
     let toDos = this.state.toDos.filter(todo => !todo.completed);
     this.setState({ toDos });
+    localStorage.setItem("toDos", JSON.stringify(toDos));
   };
 
   render() {
